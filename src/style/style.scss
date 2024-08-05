@@ -1,0 +1,16 @@
+@import "normalize", "mini-reset", "fonts", "vars";
+
+body {
+  font-family: $ff-firaSans;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: $white;
+  background-color: $dark;
+}
+
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
