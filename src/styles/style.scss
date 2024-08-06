@@ -1,0 +1,349 @@
+@import "normalize", "mini-reset", "fonts", "vars", "header", "footer";
+
+body {
+  font-family: $ff-firaSans;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: $white;
+  background-color: $dark0c1;
+}
+
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+
+.blue-btn {
+  padding: 9px 25px;
+  color: $white;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  border: none;
+  border-radius: 30px;
+  background-color: $blue003;
+  box-shadow: 0 10px 30px #406aff3d;
+}
+
+// hero
+.hero {
+  padding-top: 120px;
+  padding-bottom: 214px;
+  background: linear-gradient(
+      180deg,
+      rgba(12, 17, 23, 0) 34.25%,
+      #0c1117 111.34%
+    ),
+    url("../assets/img/hero-img.png") 100% 130px no-repeat;
+
+  &__content {
+    max-width: 688px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 5.3125rem;
+    line-height: 6.375rem;
+  }
+
+  &__descr {
+    margin-bottom: 54px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 300;
+  }
+}
+
+// what
+.what {
+  &__title {
+    margin-bottom: 78px;
+  }
+}
+
+// team
+.team {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+
+  &-col {
+    display: flex;
+    overflow: hidden;
+    min-height: 510px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      background: url("../assets/img/team-img1.jpg");
+    }
+
+    &:nth-child(2) {
+      background: url("../assets/img/team-img1.jpg");
+    }
+
+    &:nth-child(3) {
+      background: url("../assets/img/team-img2.jpg");
+    }
+
+    &:nth-child(4) {
+      background: url("../assets/img/team-img3.jpg");
+    }
+
+    &:hover &__content {
+      transform: translate(0, 0);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 56px 30px 24px;
+      text-align: center;
+      flex: 1;
+      background-color: $blue2b6;
+      transform: translate(0, 100%);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+
+    &__subtitle {
+      margin-top: 0;
+      margin-bottom: 62px;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 3.6rem;
+    }
+
+    &__descr {
+      flex: 1;
+      font-weight: 300;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+// faq
+.faq {
+  padding-bottom: 220px;
+
+  .accordions {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .accordion {
+    outline: 1px solid transparent;
+
+    &.--active {
+      outline-color: $blue003;
+
+      .accordion__img {
+        transform: rotate(180deg);
+      }
+
+      .accordion__img path {
+        fill: $blue003;
+      }
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      width: 100%;
+      text-align: left;
+      color: $white;
+      font-weight: 800;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+      background-color: $dark111;
+    }
+
+    &__img {
+      transition: transform 0.2s ease-in-out;
+
+      path {
+        fill: $white;
+        transition: fill 0.1s ease-in-out;
+      }
+    }
+
+    &__content {
+      max-height: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+      background-color: $dark1b2;
+      transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out,
+        padding-bottom 0.3s ease-in-out;
+
+      &.--active {
+        max-height: 1000px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+    }
+
+    &__descr {
+      margin: 0;
+    }
+  }
+}
+
+// clients
+.clients {
+  background-color: $dark0a0;
+
+  .container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  &__title {
+    margin: 0 0 25px 0;
+  }
+
+  &__list {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// contact
+.contact {
+  padding-top: 154px;
+  padding-bottom: 94px;
+
+  &__title {
+    margin: 0 0 123px 0;
+    text-align: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 271px;
+  }
+
+  &-form {
+    max-width: 586px;
+
+    &__control {
+      margin: 0 0 25px 0;
+    }
+
+    &__label {
+      display: block;
+      margin: 0 0 17px 0;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.35rem;
+    }
+
+    &__el {
+      width: 100%;
+      padding: 11px 9px;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.35rem;
+      color: $white;
+      border: none;
+      border-bottom: 1px solid $grey536;
+      background-color: transparent;
+
+      &::placeholder {
+        color: $dark2e2;
+      }
+    }
+
+    &__textarea {
+      resize: none;
+    }
+  }
+
+  &-address {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+
+    &__img {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      margin: 0 0 26px 0;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.35rem;
+      font-style: normal;
+    }
+
+    &__content {
+      padding-left: 39px;
+    }
+
+    .tel-list {
+      padding: 0;
+
+      &__item {
+        font-style: normal;
+
+        &:not(:last-child) {
+          margin-bottom: 29.8px;
+        }
+      }
+
+      &__text {
+        margin: 0 29px 0 0;
+        display: inline-block;
+      }
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.35rem;
+      color: $greyb6b;
+      font-style: normal;
+    }
+  }
+}

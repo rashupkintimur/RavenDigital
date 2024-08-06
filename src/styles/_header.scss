@@ -1,0 +1,25 @@
+.header {
+  .container {
+    padding-top: 48px;
+    max-width: 1710px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-nav {
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+  }
+}
