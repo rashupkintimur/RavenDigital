@@ -35,7 +35,7 @@ body {
 // hero
 .hero {
   padding-top: 120px;
-  padding-bottom: 214px;
+  padding-bottom: 204px;
   background: linear-gradient(
       180deg,
       rgba(12, 17, 23, 0) 34.25%,
@@ -64,7 +64,7 @@ body {
 
 // what
 .what {
-  padding-bottom: 79px;
+  padding-bottom: 65px;
 
   &__title {
     margin-bottom: 78px;
@@ -72,6 +72,7 @@ body {
   }
 
   &__list {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 13px;
@@ -85,47 +86,52 @@ body {
 
     &:nth-child(1) {
       &::after {
-        background: url("../assets/img/monitor.svg") 50% 50% no-repeat, $blue003;
+        background-image: url("../assets/img/monitor.svg");
       }
     }
 
     &:nth-child(2) {
       &::after {
-        background: url("../assets/img/web-page.svg") 50% 50% no-repeat,
-          $blue003;
+        background-image: url("../assets/img/web-page.svg");
       }
     }
 
     &:nth-child(3) {
       &::after {
-        background: url("../assets/img/lattice.svg") 50% 50% no-repeat, $blue003;
+        background-image: url("../assets/img/lattice.svg");
       }
     }
 
     &:nth-child(4) {
       &::after {
-        background: url("../assets/img/crystal.svg") 50% 50% no-repeat, $blue003;
+        background-image: url("../assets/img/crystal.svg");
       }
     }
 
     &:nth-child(5) {
       &::after {
-        background: url("../assets/img/stats.svg") 50% 50% no-repeat, $blue003;
+        background-image: url("../assets/img/stats.svg");
       }
     }
 
     &:nth-child(6) {
       &::after {
-        background: url("../assets/img/roller.svg") 50% 50% no-repeat, $blue003;
+        background-image: url("../assets/img/roller.svg");
       }
+    }
+
+    &::after {
+      background-color: $blue003;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
     }
 
     &:hover {
       &::after {
-        bottom: -150px;
-        right: -150px;
-        width: 400px;
-        height: 400px;
+        bottom: -90px;
+        right: -90px;
+        width: 430px;
+        height: 430px;
         border-radius: 50%;
       }
     }
@@ -174,7 +180,7 @@ body {
     padding-left: 47px;
 
     &__content {
-      max-width: 310px;
+      max-width: 370px;
     }
 
     &__title {
@@ -188,6 +194,9 @@ body {
 
     &__descr {
       margin: 0 0 30px 0;
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
     }
   }
 }
@@ -195,7 +204,7 @@ body {
 // works
 .works {
   padding-top: 38px;
-  padding-bottom: 227px;
+  padding-bottom: 200px;
   background-color: $dark0b0;
 
   &__title {
@@ -205,7 +214,7 @@ body {
   &__list {
     padding: 0;
     display: grid;
-    gap: 20px;
+    gap: 20px 25px;
   }
 
   &__list.--first {
@@ -213,7 +222,7 @@ body {
   }
 
   &__list.--second {
-    grid-template-columns: 1.2fr 0.9fr 2fr;
+    grid-template-columns: 1.19fr 0.9fr 2.1fr;
   }
 
   &-item {
@@ -244,15 +253,15 @@ body {
   background-color: $blue2b6;
 
   .container {
-    padding-top: 91px;
-    padding-bottom: 110px;
+    max-width: 1340px;
+    padding-top: 80px;
+    padding-bottom: 90px;
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &-item {
@@ -267,6 +276,7 @@ body {
     }
 
     &__descr {
+      margin: 0;
       font-weight: 700;
       font-size: 1.5rem;
       line-height: 2.145rem;
@@ -276,9 +286,87 @@ body {
   }
 }
 
+// workers
+.workers {
+  padding-top: 122px;
+  padding-bottom: 210px;
+
+  &__swiper {
+    &-container {
+      position: relative;
+      height: 517px;
+      overflow: hidden;
+    }
+  }
+
+  .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-vertical.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 0 4px 12px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 2px !important;
+    height: 83px !important;
+    background: $white;
+    opacity: 1 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $blue003;
+    box-shadow: 0px 2px 14px 0px #408cff3d;
+  }
+
+  &-slide {
+    display: flex !important;
+    gap: 77px !important;
+
+    &__content {
+      max-width: 668px;
+      padding-top: 43px;
+    }
+
+    &__img {
+      border-radius: 4px 90px 4px 4px;
+    }
+
+    &__title {
+      margin: 0 0 35px 0;
+      font-weight: 500;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__subtitle {
+      margin: 0 0 8px 0;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+    }
+
+    &__subsubtitle {
+      margin: 0 0 16px 0;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      color: $grey727;
+    }
+
+    &__descr {
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
 // team
 .team {
   padding-bottom: 152px;
+
+  &__title {
+    margin: 0 0 125px 0;
+  }
 
   &__grid {
     display: grid;
@@ -360,7 +448,10 @@ body {
 
 // blog
 .blog {
+  padding-bottom: 155px;
+
   &__title {
+    margin: 0 0 80px 0;
     text-align: center;
   }
 
@@ -403,6 +494,10 @@ body {
     &__inner {
       position: relative;
       z-index: 2;
+    }
+
+    &__content {
+      padding: 6px 10px 13px 9px;
     }
 
     &__img {
@@ -464,7 +559,7 @@ body {
 
 // faq
 .faq {
-  padding-bottom: 220px;
+  padding-bottom: 210px;
 
   .accordions {
     padding: 0;
@@ -548,7 +643,7 @@ body {
   }
 
   &__title {
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
   }
 
   &__list {
@@ -560,7 +655,7 @@ body {
 
 // contact
 .contact {
-  padding-top: 154px;
+  padding-top: 134px;
   padding-bottom: 94px;
 
   &__title {
@@ -575,10 +670,15 @@ body {
   }
 
   &-form {
+    padding: 0 0 0 13px;
     max-width: 586px;
 
     &__control {
       margin: 0 0 25px 0;
+
+      &.--last {
+        margin: 0 0 60px 0;
+      }
     }
 
     &__label {
@@ -606,14 +706,16 @@ body {
     }
 
     &__textarea {
+      height: 90px;
       resize: none;
     }
   }
 
   &-address {
+    padding: 24px 0 0 12px;
     display: flex;
     flex-direction: column;
-    gap: 67px;
+    gap: 52px;
 
     &__img {
       display: inline-block;
@@ -641,13 +743,17 @@ body {
         font-style: normal;
 
         &:not(:last-child) {
-          margin-bottom: 29.8px;
+          margin-bottom: 11px;
         }
       }
 
       &__text {
         margin: 0 29px 0 0;
         display: inline-block;
+      }
+
+      &__btn {
+        padding: 2px 40px;
       }
     }
 

@@ -1,3 +1,27 @@
+import Swiper from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+
+// swiper
+Swiper.use([Pagination, Navigation, Autoplay]);
+
+new Swiper(".workers__swiper-container", {
+  direction: "vertical",
+  spaceBetween: 100,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".workers__swiper-pagination",
+    clickable: true,
+    bulletClass: "swiper-pagination-bullet",
+    bulletActiveClass: "swiper-pagination-bullet-active",
+  },
+});
+
+// accordion
 document.querySelector(".accordions").addEventListener("click", (event) => {
   const accordionButton = event.target.closest(".accordion__button");
 
