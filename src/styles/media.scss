@@ -1,0 +1,443 @@
+@import "vars";
+
+@media (max-width: 1850px) {
+  .hero {
+    &__content {
+      background-color: rgba(12, 17, 23, 0.5);
+      border-radius: 15px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .blue-btn {
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: $blue2b6;
+    }
+
+    &:active {
+      background-color: #002b9d;
+    }
+
+    &:focus {
+      outline: 2px solid red;
+    }
+  }
+
+  .what {
+    &-item {
+      &:hover {
+        &::after {
+          bottom: -40px;
+          right: -40px;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .team {
+    &-col {
+      &:hover &__content {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .blog {
+    &-item {
+      &:hover {
+        &::after {
+          height: 70%;
+        }
+
+        .blog-item__descr {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .what {
+    &-item {
+      &:hover {
+        &::after {
+          bottom: -90px;
+          right: -90px;
+          width: 430px;
+          height: 430px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .header {
+    .burger {
+      display: flex;
+    }
+
+    &-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translate(0, -100%);
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease-in-out;
+
+      &.--active {
+        transform: translate(0, 0);
+      }
+
+      &__item:not(:last-child) {
+        margin: 0;
+      }
+
+      &__list {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+  }
+
+  .stats {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    &__item {
+      text-align: center;
+      justify-self: center;
+    }
+  }
+
+  .workers {
+    padding-bottom: 130px;
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: -50px !important;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px !important;
+      height: 10px !important;
+    }
+
+    &__swiper {
+      &-container {
+        height: auto;
+      }
+    }
+
+    &-slide {
+      max-width: 1000px !important;
+      flex-direction: column;
+
+      &__content {
+        padding-top: 0;
+      }
+
+      &__img {
+        border-top-right-radius: 160px;
+      }
+    }
+  }
+
+  .team {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .clients {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      justify-self: center;
+    }
+  }
+
+  .contact {
+    &__content {
+      gap: 100px;
+    }
+
+    &-form {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background: none;
+
+    &__content {
+      background-color: transparent;
+    }
+  }
+
+  .what {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-card {
+      grid-column: auto;
+    }
+  }
+
+  .works {
+    padding-bottom: 80px;
+  }
+
+  .stats {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .workers {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &-slide {
+      gap: 0 !important;
+
+      &__content {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  .team {
+    padding-bottom: 100px;
+
+    &__title {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  .blog {
+    padding-bottom: 90px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .faq {
+    padding-bottom: 100px;
+  }
+
+  .contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__content {
+      gap: 50px;
+    }
+  }
+
+  .footer {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .works {
+    &__list {
+      &.--first {
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &.--second {
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  .team {
+    padding-bottom: 50px;
+
+    &__title {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  .blog {
+    padding-bottom: 40px;
+  }
+
+  .clients {
+    .container {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__title {
+      margin: 0 0 35px 0;
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-form {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    &__title {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+  }
+
+  .what {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .stats {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-item {
+      justify-self: center;
+
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+
+  .team {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .blog {
+    padding-bottom: 20px;
+
+    &__title {
+      margin: 0 0 40px 0;
+    }
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .faq {
+    padding-bottom: 50px;
+
+    .accordion {
+      &__content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      &__button {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .clients {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contact {
+    &-address {
+      .tel-list {
+        &__item:not(:last-child) {
+          margin-bottom: 40px;
+        }
+
+        &__text {
+          margin-bottom: 10px;
+        }
+
+        &__btn {
+          padding: 7px 30px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .clients {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .workers {
+    &-slide {
+      &__content {
+        padding-top: 20px;
+      }
+
+      &__title {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}

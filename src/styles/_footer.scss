@@ -10,6 +10,10 @@
   &__logo {
     display: inline-block;
     margin: 0 0 30px 0;
+
+    &:focus {
+      outline: 2px solid red;
+    }
   }
 
   &__descr {
@@ -34,6 +38,10 @@
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.35rem;
+
+    &:focus {
+      outline: 2px solid red;
+    }
   }
 
   &__social {
@@ -50,10 +58,16 @@
       margin-right: 40px;
     }
 
-    &__link:hover {
-      .footer-social__img path,
-      .footer-social__img circle {
-        fill: $blue003;
+    &__link {
+      &:hover {
+        .footer-social__img path,
+        .footer-social__img circle {
+          fill: $blue003;
+        }
+      }
+
+      &:focus {
+        outline: 2px solid red;
       }
     }
 

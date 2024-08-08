@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.scss" />
+    <link rel="stylesheet" href="./styles/media.scss" />
     <script type="module" src="./scripts/script.js"></script>
     <title>Raven Digital</title>
   </head>
@@ -42,6 +43,10 @@
             </li>
           </ul>
         </nav>
+        <div class="header__burger burger">
+          <span class="burger__line"></span><span class="burger__line"></span
+          ><span class="burger__line"></span>
+        </div>
       </div>
     </header>
     <main class="content">
@@ -305,8 +310,8 @@
       <section class="team">
         <div class="container">
           <h2 class="team__title section-title">Our team</h2>
-          <div class="team__grid">
-            <div class="team-col">
+          <ul class="team__list">
+            <li class="team-col">
               <div class="team-col__content">
                 <h3 class="team-col__title">Jane Doe</h3>
                 <h4 class="team-col__subtitle">Company / CEO</h4>
@@ -333,8 +338,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="team-col">
+            </li>
+            <li class="team-col">
               <div class="team-col__content">
                 <h3 class="team-col__title">Jane Doe</h3>
                 <h4 class="team-col__subtitle">Company / CEO</h4>
@@ -361,8 +366,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="team-col">
+            </li>
+            <li class="team-col">
               <div class="team-col__content">
                 <h3 class="team-col__title">Jane Doe</h3>
                 <h4 class="team-col__subtitle">Company / CEO</h4>
@@ -389,8 +394,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="team-col">
+            </li>
+            <li class="team-col">
               <div class="team-col__content">
                 <h3 class="team-col__title">Jane Doe</h3>
                 <h4 class="team-col__subtitle">Company / CEO</h4>
@@ -417,8 +422,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="blog">
@@ -678,10 +683,11 @@
         <div class="container">
           <h2 class="contact__title section-title">Contact us</h2>
           <div class="contact__content">
-            <form action="#" class="contact__form contact-form">
+            <form method="POST" action="#" class="contact__form contact-form">
               <div class="contact-form__control">
                 <label class="contact-form__label" for="name">Name</label>
                 <input
+                  name="name"
                   id="name"
                   type="text"
                   placeholder="Name here"
@@ -693,6 +699,7 @@
                   >Last name</label
                 >
                 <input
+                  name="last_name"
                   id="last_name"
                   type="text"
                   placeholder="Last name here"
@@ -702,6 +709,7 @@
               <div class="contact-form__control">
                 <label class="contact-form__label" for="email">Email</label>
                 <input
+                  name="email"
                   id="email"
                   type="email"
                   placeholder="Example@mail.eru"

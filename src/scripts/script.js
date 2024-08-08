@@ -2,23 +2,37 @@ import Swiper from "swiper";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".header-nav");
+
 // swiper
 Swiper.use([Pagination, Navigation, Autoplay]);
 
 new Swiper(".workers__swiper-container", {
-  direction: "vertical",
-  spaceBetween: 100,
+  direction: "horizontal",
+  spaceBetween: 50,
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
+  // autoplay: {
+  //   delay: 7000,
+  //   disableOnInteraction: false,
+  // },
+  breakpoints: {
+    1300: {
+      direction: "vertical",
+      pagination: {
+        el: ".workers__swiper-pagination",
+        clickable: true,
+        bulletClass: "swiper-pagination-bullet",
+        bulletActiveClass: "swiper-pagination-bullet-active",
+      },
+    },
   },
-  pagination: {
-    el: ".workers__swiper-pagination",
-    clickable: true,
-    bulletClass: "swiper-pagination-bullet",
-    bulletActiveClass: "swiper-pagination-bullet-active",
-  },
+});
+
+// burger
+burger.addEventListener("click", () => {
+  burger.classList.toggle("--active");
+  nav.classList.toggle("--active");
 });
 
 // accordion
